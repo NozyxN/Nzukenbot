@@ -1563,29 +1563,33 @@ _Tunggu Proses Upload Media_`
 									sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: Ofc})
 									break
 						case 'tiktoknowm':   case 'tiktok':
+                                                                        if (!q) return reply('Linknya?')
+									
 									if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Invalid link')
-									if (!q) return reply('Linknya?')
 									let nowem = q
 									hx.ttdownloader(nowem)
 									.then(result => {
 										const { wm, nowm, audio } = result
 										axios.get(`https://tinyurl.com/api-create.php?url=${nowm}`)
 										.then(async (a) => {
+                                                                                        let meno = await getBuffer(nowm)
 											me = `*Link* : ${a.data}`
-											Zeeone.sendMessage(from,{url:`${nowm}`},video,{mimetype:'video/mp4',quoted: Ofc, caption:me})
+											Zeeone.sendMessage(from,meno,MessageType.video,{mimetype:'video/mp4',quoted: Ofc, caption:me})
 											})
 										}).catch((err) => reply(`Link tidak valid`))
 									break 
 						case 'tiktokmusic': case 'tiktokaudio':  
+                                                                        if (!q) return reply('Linknya?')
 									if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Invalid Link')
-									if (!q) return reply('Linknya?')
+									
 									let audi = q
 									hx.ttdownloader(audi)
 									.then(result => {
 										const { wm, nowm, audio } = result
 										axios.get(`https://tinyurl.com/api-create.php?url=${audio}`)
 										.then(async (a) => {
-											Zeeone.sendMessage(from,{url:`${audio}`},MessageType.audio,{mimetype:'audio/mp4',quoted: Ofc})
+                                                                                 let audin = await getBuffer(audio)
+											Zeeone.sendMessage(from,audin,MessageType.audio,{mimetype:'audio/mp4',quoted: Ofc})
 											})
 										}).catch((err) => reply(`Link tidak valid`))
 									break
