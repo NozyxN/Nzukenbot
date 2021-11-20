@@ -447,16 +447,16 @@ var waktoo = date.getHours();
 Isi sendiri
 
 Minat? Pm wa.me/${owner_number}`,
-					ban: 'Maaf Lord Nomor Kamu Sudah Di Banned!',
-					error: 'Error Lord, Mungkin Lagi Diperbaiki',
-					errorLink: 'Link Error Lord',
-					succes: '```[ ✓ ]``` Sukses Lord',
+					ban: 'Maaf Tod Nomor Kamu Sudah Di Banned!',
+					error: 'Error Tod, Mungkin Lagi Diperbaiki',
+					errorLink: 'Link Error Tod',
+					succes: '```[ ✓ ]``` Sukses Tod',
 					only: {
 						personal: 'Only Private Chat Lord',
 						admin: 'Khusus Admin Group Lord',
 						group: 'Khusus Dalam Grup Lord',
 						 prem: 'Khusus User Premium Lord',
-						owner: 'Khusus Owner Bot Lord',
+						owner: 'Khusus Owner Bot Cuy',
 						 }
 					} 
 	    const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net",   "remoteJid": "6289523258649-1604595598@g.us"  }, "message": {orderMessage: {itemCount: 2021,status: 200, thumbnail: thumbnail, surface: 200, message: `「 𝐑𝐔𝐍𝐓𝐈𝐌𝐄 」\n${runtime2}`, orderTitle: 'zeeoneofc', sellerJid: '0@s.whatsapp.net'}}, sendEphemeral: true}
@@ -1318,7 +1318,7 @@ const checkWin = (sender) => {
 										let ran_blc = randomNomor(50)
 										addBalance(sender, ran_blc, balance)
 										fs.writeFileSync('./database/user.json', JSON.stringify(_user))
-										teks = `╭─❒ *Verification* ❒\n│📛 *Nama :* ${pushname}\n│#️⃣ *Nomor :* @${sender.split('@')[0]}\n│💌 *Bio :* ${bio_user}\n│⏰ *Time :* ${wib} Wib\n╰❒ *Success*`
+										teks = `╭─❒ *Verification* ❒\n│• *Nama :* ${pushname}\n│• *Nomor :* @${sender.split('@')[0]}\n│• *Bio :* ${bio_user}\n│• *Time :* ${wib} Wib\n╰❒ *Success*`
 										let papako = [{
 											"buttonId": `menu`,
 											"buttonText": {
@@ -1332,7 +1332,7 @@ const checkWin = (sender) => {
 														},
 														"type": "RESPONSE"
 													}]
-											sendButLocation(from, teks , `Thank for verification 💋\n${namabot}™© | By ${owner_name}`, thumbnail, papako, {contextInfo: { mentionedJid: [sender]}})
+											sendButLocation(from, teks , `Thank for verification\n${namabot}© | By ${owner_name}`, thumbnail, papako, {contextInfo: { mentionedJid: [sender]}})
 									break
 						case 'autoregis': case 'register':
 									if (!Ofc.key.fromMe && !isOwner && !isCreator) return reply(mess.only.owner)
@@ -3137,7 +3137,7 @@ let qqppp = [{
                     },
                     "type": "RESPONSE"
                 }]
-                sendButLocation(from, teks, `LordUserbot™© | Allright Reserved.`, thumbnail, qqppp, {contextInfo: { mentionedJid: [nupe]}})
+                sendButLocation(from, teks, `Nzukenソ© | Allright Reserved.`, thumbnail, qqppp, {contextInfo: { mentionedJid: [nupe]}})
 				
 } catch (e){
 reply(`${e}`)
