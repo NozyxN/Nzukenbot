@@ -3719,7 +3719,7 @@ ${res.desc ? `${res.desc}` : 'Gada'}
  let ran_blc = randomNomor(50)
  addBalance(sender, ran_blc, balance)
 fs.writeFileSync('./database/user.json', JSON.stringify(_user))
-teks = `╭─❒ *Verification* ❒\n│📛 *Nama :* ${pushname}\n│#️⃣ *Nomor :* @${sender.split('@')[0]}\n│💌 *Bio :* ${bio_user}\n│⏰ *Time :* ${wib} Wib\n╰❒ *Success*`
+teks = `╭─❒ *Verification* ❒\n│ *Nama :* ${pushname}\n│• *Nomor :* @${sender.split('@')[0]}\n│• *Bio :* ${bio_user}\n│• *Time :* ${wib} Wib\n╰❒ *Success*`
 let papako = [{
 										"buttonId": `menu`,
 										"buttonText": {
@@ -3733,7 +3733,7 @@ let papako = [{
 											},
 										"type": "RESPONSE"
 										}]
-								sendButLocation(from, teks , `Thank for verification 💋\n${botname}™© | By ${ownername}`, thumbnail, papako, {contextInfo: { mentionedJid: [sender]}})
+								sendButLocation(from, teks , `Thank for verification\n${botname}© | By ${ownername}`, thumbnail, papako, {contextInfo: { mentionedJid: [sender]}})
                 }
 		
 if (budy.startsWith('x')){
